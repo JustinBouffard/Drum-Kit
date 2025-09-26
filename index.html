@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Drum Kit</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <h1 id="title">Drum 🥁 Kit</h1>
+    <div class="set">
+      <button class="w drum">w</button>
+      <button class="a drum">a</button>
+      <button class="s drum">s</button>
+      <button class="d drum">d</button>
+      <button class="j drum">j</button>
+      <button class="k drum">k</button>
+      <button class="l drum">l</button>
+    </div>
 
-<body>
+    <footer>
+      Try to play the drum kit using your keyboard! 🎶
 
-  <h1 id="title">Drum 🥁 Kit</h1>
-  <div class="set">
-    <button class="w drum">w</button>
-    <button class="a drum">a</button>
-    <button class="s drum">s</button>
-    <button class="d drum">d</button>
-    <button class="j drum">j</button>
-    <button class="k drum">k</button>
-    <button class="l drum">l</button>
-  </div>
+      <div id="settings">
+        <!-- <label for="volume">Volume</label>
+        <input
+          type="range"
+          id="volume"
+          name="volume"
+          min="0"
+          max="1"
+          step="0.1"
+          value="1.0"
+        />
 
+        <button id="record">Record</button>
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+        <button id="clear">Clear</button> -->
+        <button id="metronome">Metronome</button>
+      </div>
+    </footer>
 
-  <footer>
-    Try to play the drum kit using your keyboard! 🎶 
-  </footer>
-
-  <script src="index.js" charset="utf-8"></script>
-</body>
-
+    <script src="index.js" charset="utf-8"></script>
+  </body>
 </html>

@@ -1,5 +1,7 @@
 // select all buttons with class drum
 const drumButtons = document.querySelectorAll(".drum");
+const metronome = document.querySelector("#metronome");
+let isMetronomeOn = false;
 const drumSoundTypes = {
   w: "sounds/tom-1.mp3",
   a: "sounds/tom-2.mp3",
@@ -42,4 +44,29 @@ function animateButton(soundType) {
       activeButton.classList.remove("pressed");
     }, 150);
   }
+}
+
+metronome.addEventListener("click", function () {
+  if (!isMetronomeOn) {
+    isMetronomeOn = true;
+    metronome.classList.add("active");
+    startMetronome();
+  } else {
+    isMetronomeOn = false;
+    metronome.classList.remove("active");
+    stopMetronome();
+  }
+});
+
+let metronomeInterval;
+
+function startMetronome() {
+  metronomeInterval = setInterval(() => {
+    const metronomeSound = new Audio("sounds/scream.mp3");
+    metronomeSound.play();
+  }, 60000 / 50);
+}
+
+function stopMetronome() {
+  clearInterval(metronomeInterval);
 }
